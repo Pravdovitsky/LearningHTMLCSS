@@ -10,21 +10,6 @@ a {
     font-family: Montserrat, serif;
 }
 
-th a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #999999;
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 22px;
-}
-
-table {
-    width: 1100px;
-    margin-bottom: 70px;
-}
-
 input {
     width: 299px;
     height: 45px;
@@ -522,26 +507,74 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 60px;
     flex-direction: column;
     align-items: center;
 }
 
-.cell-head {
-    font-family: Montserrat, serif;
-    font-size: 18px;
-    height: 30px;
+.footer-style {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info {
+    margin: 10px 43px;
 }
 
 .cell {
-    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cell-style {
+    text-decoration: none;
+    font-size: 14px;
+    color: #999999;
+    background-color: #f6f6f8;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 22px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+}
+
+.cell-style:hover{
+    cursor: pointer;
+}
+
+.envelope {
+    background-image: url("images/envelope.png");
+    width: 15px;
+    height: 13px;
+}
+
+.call {
+    background-image: url("images/call.png");
+    width: 15px;
+    height: 15px;
+}
+
+.place {
+    background-image: url("images/placeholder.png");
+    width: 15px;
+    height: 15px;
+}
+
+.arrow {
+    background-image: url("images/arrow.png");
+    width: 6px;
+    height: 10px;
 }
 
 .footer-line {
     width: 1100px;
     height: 1px;
     background-color: #a9a9a9;
-    margin-bottom: 30px;
+    margin: 70px 30px;
 }
 
 .copy {
@@ -551,9 +584,42 @@ input {
     margin-bottom: 35px;
 }
 
+.search-btn:hover {
+    cursor: pointer;
+}
+
 @font-face {
     font-family: "Montserrat";
     src: url("fonts/Montserrat.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
+}
+
+@media (max-width: 1100px) {
+    .services-line {
+        width: 80%;
+    }
+    .footer-line {
+        width: 80%;
+    }
+    .about-line{
+        width: 80%;
+    }
+    .city {
+        width: 80%;
+    }
+    .rectangles {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .services-info {
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-text {
+        text-align: center;
+    }
 }
