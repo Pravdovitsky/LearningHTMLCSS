@@ -39,12 +39,11 @@ input {
     flex-wrap: wrap;
     justify-content: space-between;
     position: absolute;
-    right: 20%;
     top: 40px;
 }
 
 .header-btn {
-    width: 126px;
+    width: 136px;
     height: 59px;
     font-size: 16px;
     color: #f6f6f8;
@@ -63,7 +62,6 @@ input {
 }
 
 .first-scene-text {
-    width: 680px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +69,6 @@ input {
 }
 
 .style-text {
-    width: 829px;
     font-family: Montserrat, serif;
     font-weight: 900;
     font-size: 48px;
@@ -127,8 +124,6 @@ input {
     font-family: Montserrat, serif;
     font-size: 36px;
     font-weight: 900;
-    width: 739px;
-    height: 88px;
     text-align: center;
 }
 
@@ -136,7 +131,6 @@ input {
     font-family: Montserrat, serif;
     font-size: 14px;
     color: #a9a9a9;
-    width: 700px;
     margin-top: 50px;
     text-align: center;
 }
@@ -215,13 +209,13 @@ input {
     font-size: 36px;
     font-weight: bold;
     margin-top: 100px;
+    text-align: center;
 }
 
 .lor-text {
     font-family: Montserrat, serif;
     font-size: 16px;
     color: grey;
-    width: 480px;
     margin-top: 50px;
 }
 
@@ -588,6 +582,10 @@ input {
     cursor: pointer;
 }
 
+.hide-menu {
+    display: none;
+}
+
 @font-face {
     font-family: "Montserrat";
     src: url("fonts/Montserrat.ttf") format("truetype");
@@ -621,5 +619,69 @@ input {
     }
     .service-text {
         text-align: center;
+    }
+}
+
+@media (max-width: 675px) {
+    .style-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .line {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    .hide-menu {
+        display: block;
+    }
+    a {
+        margin-top: 0;
+    }
+    ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul:after {
+        display: block;
+        content: ' ';
+        clear: both;
+        float: none;
+    }
+    ul.hide-menu > li {
+        float: left;
+        position: relative;
+    }
+    ul.hide-menu > li > a {
+        display: block;
+        padding: 10px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    ul.submenu {
+        display: none;
+        position: absolute;
+        width: 150px;
+        padding-top: 5px;
+    }
+    ul.submenu > li {
+        display: block;
+    }
+    ul.submenu > li > a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding-top: 15px;
+    }
+    ul.submenu > li > a:hover {
+        text-decoration: underline;
+    }
+    ul.hide-menu > li:hover > ul.submenu {
+        display: block;
     }
 }
